@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+ol {
+    text-align: left;
+    margin-left: 30px;
+}
+
+li {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Add this style to your login.css file */
+
+#share-progress-container {
+    width: 100%;
+    margin-top: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#share-progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4CAF50; /* Initial color for progress */
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out; /* Add smooth transition for animation */
+    position: absolute;
+}
+
+#progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.warning-text {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#otp-form {
+    display: none;
+}
